@@ -30,7 +30,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.0.2
 
     - name: cache-qemu
       id: cache-qemu
@@ -40,7 +40,7 @@ jobs:
         key: qemu-aarch64-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.0.2
       with:
         repository: qemu/qemu
         path: qemu
@@ -88,7 +88,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.0.2
 
     - name: cache-qemu
       id: cache-qemu
@@ -98,7 +98,7 @@ jobs:
         key: qemu-aarch64-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.0.2
       with:
         repository: qemu/qemu
         path: qemu

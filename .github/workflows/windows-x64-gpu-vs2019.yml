@@ -34,7 +34,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.0.2
       with:
         submodules: true
     - name: cache-protobuf
@@ -72,7 +72,7 @@ jobs:
         key: swiftshader-windows-install-20200508
     - name: checkout-swiftshader
       if: steps.cache-swiftshader.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.0.2
       with:
         repository: google/swiftshader
         path: swiftshader
