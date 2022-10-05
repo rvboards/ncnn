@@ -26,7 +26,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
       with:
         submodules: true
     - name: lcov
@@ -52,7 +52,7 @@ jobs:
         key: swiftshader-linux-install-20200508
     - name: checkout-swiftshader
       if: steps.cache-swiftshader.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: google/swiftshader
         path: swiftshader
@@ -99,7 +99,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
     - name: lcov
       run: sudo apt-get install lcov
     - name: configure
@@ -128,7 +128,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
     - name: lcov
       run: sudo apt-get install lcov
     - name: configure
@@ -157,7 +157,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
     - name: lcov
       run: sudo apt-get install lcov
     - name: configure
@@ -186,7 +186,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
     - name: lcov
       run: sudo apt-get install lcov
 
@@ -198,7 +198,7 @@ jobs:
         key: qemu-arm-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: qemu/qemu
         path: qemu
@@ -248,7 +248,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
     - name: lcov
       run: sudo apt-get install lcov
 
@@ -260,7 +260,7 @@ jobs:
         key: qemu-aarch64-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: qemu/qemu
         path: qemu
@@ -310,7 +310,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
 
     - name: lcov
       run: sudo apt-get install lcov
@@ -322,7 +322,7 @@ jobs:
         key: qemu-aarch64-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: qemu/qemu
         path: qemu
@@ -372,7 +372,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
 
     - name: lcov
       run: sudo apt-get install lcov
@@ -384,7 +384,7 @@ jobs:
         key: qemu-aarch64-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: qemu/qemu
         path: qemu
@@ -434,7 +434,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
 
     - name: lcov
       run: sudo apt-get install lcov
@@ -446,7 +446,7 @@ jobs:
         key: qemu-mipsel-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: qemu/qemu
         path: qemu
@@ -496,7 +496,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
 
     - name: lcov
       run: sudo apt-get install lcov
@@ -508,7 +508,7 @@ jobs:
         key: qemu-mips64el-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: qemu/qemu
         path: qemu
@@ -558,7 +558,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
 
     - name: lcov
       run: sudo apt-get install lcov
@@ -571,7 +571,7 @@ jobs:
         key: qemu-riscv64-install-1
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: qemu/qemu
         path: qemu
@@ -621,7 +621,7 @@ jobs:
       uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.1.0
 
     - name: lcov
       run: sudo apt-get install lcov
@@ -641,7 +641,7 @@ jobs:
 
     - name: checkout-qemu
       if: steps.cache-qemu.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: sifive/qemu
         path: qemu
@@ -678,7 +678,7 @@ jobs:
 
     - name: checkout-riscv-gnu-toolchain
       if: steps.cache-riscv.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
       with:
         repository: riscv/riscv-gnu-toolchain
         path: riscv-gnu-toolchain
